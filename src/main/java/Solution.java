@@ -1,8 +1,6 @@
-import exceptions.Assignment2FileNotFoundException;
+package main.java;
 
-import java.io.FileNotFoundException;
-
-public class Solution {
+public class Solution implements ISolution {
     public int maximalniBrojBalona(String text) {
         int b = 0, a = 0, l = 0, o = 0, n = 0;
         try {

@@ -1,4 +1,4 @@
-package exceptions;
+package main.java.exceptions;
 
 /**
  *Exception za Assignment
