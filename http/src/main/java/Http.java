@@ -130,7 +130,6 @@ public class Http {
 
             System.out.println("Executing request " + httpPut.getRequestLine());
 
-            // Create a custom response handler
             ResponseHandler<String> responseHandler = response -> {
                 int status = response.getStatusLine().getStatusCode();
                 if (status >= 200 && status < 300) {
