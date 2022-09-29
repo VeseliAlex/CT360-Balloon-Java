@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>One languange</title>
+
+</head>
+<body>
+<h3>The languange u wanted:</h3>
+<table>
+			<caption>Languange:</caption>
+			<tr>
+			<th>Name of the languange</th>
+			<th>Translate</th>
+			</tr>
+			<td th:text = "${mojJezik.imeJezika}"></td>
+			<td th:text = "${mojJezik.vrednost}"></td>
+			</tr>
+		</table>
+</body>
+</html>

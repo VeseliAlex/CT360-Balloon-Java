@@ -1,0 +1,70 @@
+<!Doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta charset = "UTF-8">
+		<title>All languanges</title>
+		<style type="text/css">
+		table,th,td{border: 1px solid black;margin-left: auto;margin-right:auto}
+		body {text-align: center}
+
+		  h1 {
+               display: block;
+               text-align: center;
+               position: relative;
+               top: 30px;
+               color: #2a59d0;
+               text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+              }
+             h2 {
+               display: block;
+               text-align: center;
+               position: relative;
+               top: 30px;
+               color: #2a59d0;
+               text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+              }
+              h3 {
+               display: block;
+               text-align: center;
+               position: relative;
+               top: 30px;
+               color: #2a59d0;
+               text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+              }
+              form .user-details .input-box{
+             margin-bottom: 15px;
+             width: calc(100% / 2 - 20px);
+            }
+
+          form .input-box label.details{
+             display: block;
+             font-weight: 500;
+             margin-bottom: 5px;
+            }
+
+		</style>
+	</head>
+	<body>
+	<h2 th:if="${ulogovan == true}">Successfully logged in</h2>
+
+
+		<div>
+		<h3>Lets see Hello world on different languanges </h3>
+		<h3>Choose languange</h3>
+		<table>
+			<tr th:each = "jezik : ${sviJezici}">
+			<td ><a th:href="|/jezici/StranicaJednogJezika?imeJezika=${jezik.imeJezika}|" th:text = "${jezik.imeJezika}"></a></td>
+			</tr>
+		</table>
+	</div>
+	<br>
+	<label>Log In</label>
+	<form action = "/korisnici/login" method="get">
+		<input type="text" name = "korisnickoIme" placeholder="Type username" required="required">
+		<input type="text" name = "lozinka" placeholder="Type password" required="required">
+		<input type="submit" value="Log in">
+	</form>
+	
+	</body>
+</html>
